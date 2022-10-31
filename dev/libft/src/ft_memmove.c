@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 12:06:47 by ndick             #+#    #+#             */
-/*   Updated: 2022/10/31 15:54:26 by ndick            ###   ########.fr       */
+/*   Created: 2022/10/31 16:24:24 by ndick             #+#    #+#             */
+/*   Updated: 2022/10/31 16:39:26 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int c)
+#include <stdlib.h>
+#include <unistd.h>
+
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+
 }
