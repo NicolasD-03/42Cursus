@@ -1,19 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 16:24:24 by ndick             #+#    #+#             */
-/*   Updated: 2022/10/31 16:39:26 by ndick            ###   ########.fr       */
+/*   Created: 2022/10/31 15:19:06 by ndick             #+#    #+#             */
+/*   Updated: 2022/11/07 19:08:16 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+int	ft_strlen(char *str)
 {
+	int	i;
 
+	i = 0;
+	while (str[i])
+		i++;
+	return (i);
 }

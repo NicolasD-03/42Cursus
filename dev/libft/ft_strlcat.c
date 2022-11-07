@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/31 15:55:16 by ndick             #+#    #+#             */
-/*   Updated: 2022/10/31 16:36:34 by ndick            ###   ########.fr       */
+/*   Created: 2022/11/07 20:11:01 by ndick             #+#    #+#             */
+/*   Updated: 2022/11/07 20:20:49 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+int	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
 {
 	size_t	i;
+	size_t	j;
+	size_t	src_len;
+	size_t	dest_len;
 
 	i = 0;
-	while (i < n)
-	{
-		((char *)dst)[i] = ((char *)src)[i];
-		i++;
-	}
-	return (dst);
-}
+	src_len = ft_strlen(src);
+	dest_len = ft_strlen(dst);
+	j = dest_len;
 
-int	main(void)
-{
-	int array[5] = {1, 2, 3, 4, 5};
-	int * copy = NULL;
-	int len = sizeof(int) * 5;
-	int	i;
+	if (dstsize == 0 || dstsize <= dest_len)
+		return (src_len + dstsize);
 
-	i = 0;
-	copy = (int *)malloc(len);
-	ft_memcpy(copy, array, len);
-	while (i < 5)
+	while (src[i] && i < dstsize - dest_len - 1)
 	{
-		printf("%d", copy[i]);
+		dst[j] = src[i];
 		i++;
+		j++;
 	}
-	return (0);
+	dst[j] = '\0';
+	return (src_len + dest_len);
 }

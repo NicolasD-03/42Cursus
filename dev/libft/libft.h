@@ -6,7 +6,7 @@
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:44:50 by ndick             #+#    #+#             */
-/*   Updated: 2022/10/31 16:06:01 by ndick            ###   ########.fr       */
+/*   Updated: 2022/11/07 19:56:47 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stdlib.h>
+# include <unistd.h>
 
 int		ft_isaplha(int c);
 int		ft_isdigit(int c);
