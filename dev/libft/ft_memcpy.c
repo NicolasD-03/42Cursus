@@ -6,17 +6,19 @@
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 15:55:16 by ndick             #+#    #+#             */
-/*   Updated: 2022/11/07 19:08:07 by ndick            ###   ########.fr       */
+/*   Updated: 2022/11/09 20:05:39 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 
 	i = 0;
+	if (dst == NULL && src == NULL)
+		return (NULL);
 	while (i < n)
 	{
 		((char *)dst)[i] = ((char *)src)[i];
