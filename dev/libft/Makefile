@@ -5,10 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: ndick <ndick@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/11/09 19:23:23 by ndick             #+#    #+#              #
-#    Updated: 2022/11/10 23:57:59 by ndick            ###   ########.fr        #
+#    Created: 2022/11/16 03:04:32 by ndick             #+#    #+#              #
+#    Updated: 2022/11/16 03:04:35 by ndick            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+
 
 
 SRCS	= ft_isalpha.c	ft_isdigit.c	ft_isalnum.c	ft_isascii.c	ft_isprint.c	\

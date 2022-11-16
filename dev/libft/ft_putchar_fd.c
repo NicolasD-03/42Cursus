@@ -6,7 +6,13 @@
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 00:00:52 by ndick             #+#    #+#             */
-/*   Updated: 2022/11/11 00:00:53 by ndick            ###   ########.fr       */
+/*   Updated: 2022/11/16 04:28:39 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putchar_fd(char c, int fd)
+{
+	write(fd, &c, 1);
+}

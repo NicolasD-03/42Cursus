@@ -6,7 +6,16 @@
 /*   By: ndick <ndick@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/11 00:01:29 by ndick             #+#    #+#             */
-/*   Updated: 2022/11/11 00:01:31 by ndick            ###   ########.fr       */
+/*   Updated: 2022/11/16 04:32:22 by ndick            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	ft_putendl_fd(char *s, int fd)
+{
+	if (!s)
+		return ;
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
+}
